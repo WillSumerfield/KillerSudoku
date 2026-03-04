@@ -153,9 +153,10 @@ def draw_board(canvas):
 def main():
     root = tk.Tk()
     root.title("Killer Sudoku")
-    root.resizable(False, False)
-    canvas = tk.Canvas(root, width=CANVAS_SIZE, height=CANVAS_SIZE, bg="white")
-    canvas.pack()
+    root.configure(bg="#e8e8e8")
+    canvas = tk.Canvas(root, width=CANVAS_SIZE, height=CANVAS_SIZE, bg="white",
+                       relief="flat", bd=0, highlightthickness=0)
+    canvas.pack(padx=16, pady=16)
     draw_board(canvas)
     root.mainloop()
 
